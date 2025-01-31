@@ -362,27 +362,20 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.container'); // Родительский элемент, содержащий все .item
-
+            const container = document.querySelector('.container');
             container.addEventListener('click', (event) => {
                 const header = event.target.closest('.item-header');
                 if (!header) return;
-
                 const item = header.parentElement;
                 const isActive = item.classList.contains('active');
-
-                // Удаляем класс active у всех элементов
                 document.querySelectorAll('.item.active').forEach((activeItem) => {
                     activeItem.classList.remove('active');
                 });
-
-                // Добавляем класс active к текущему элементу, если он не был активен
                 if (!isActive) {
                     item.classList.add('active');
                 }
             });
-        });
-        document.addEventListener("DOMContentLoaded", () => {
+
             const checkboxes = document.querySelectorAll(".custom-checkbox");
             const apiRequest1 = document.getElementById("apiRequest1");
             const apiRequest2 = document.getElementById("apiRequest2");
@@ -399,8 +392,7 @@
                         });
                         apiRequest1.value = requestText;
                         apiRequest2.value = responseText;
-                        checkbox.nextElementSibling.style.backgroundColor =
-                            "rgba(255, 186, 89, 0.1)";
+                        checkbox.nextElementSibling.style.backgroundColor = "rgba(255, 186, 89, 0.1)";
                         checkbox.nextElementSibling.style.color = "rgba(255, 186, 89, 1)";
                     } else {
                         apiRequest1.value = "";
@@ -411,51 +403,43 @@
                 });
             }
 
-            updateTextAreas(
-                document.getElementById("apiIconPHP"),
-                "PHP запрос",
-                "PHP ответ"
-            );
-            updateTextAreas(
-                document.getElementById("apiIconNodeJS"),
-                "Node.js запрос",
-                "Node.js ответ"
-            );
-            updateTextAreas(
-                document.getElementById("apiIconPython"),
-                "Python запрос",
-                "Python ответ"
-            );
-            
+            updateTextAreas(document.getElementById("apiIconPHP"), "PHP запрос", "PHP ответ");
+            updateTextAreas(document.getElementById("apiIconNodeJS"), "Node.js запрос", "Node.js ответ");
+            updateTextAreas(document.getElementById("apiIconPython"), "Python запрос", "Python ответ");
+
             const titleSection = document.getElementById('titleSection');
-                setTimeout(() => {
-                    titleSection.style.backgroundImage = 'url(../img/LightningIcon.svg)';
-                    titleSection.style.backgroundPositionY = '70%';
-                }, 4000);
-                setInterval(() => {
-                    titleSection.style.backgroundPositionY = titleSection.style.backgroundPositionY === '70%' ? '80%' : '70%';
-                }, 1000);
+            setTimeout(() => {
+                titleSection.style.backgroundImage = 'url(../img/LightningIcon.svg)';
+                titleSection.style.backgroundPositionY = '70%';
+            }, 4000);
+            setInterval(() => {
+                titleSection.style.backgroundPositionY = titleSection.style.backgroundPositionY === '70%' ? '80%' : '70%';
+            }, 1000);
+
             function toggleMenu() {
                 const navigation = document.querySelector(".navBar");
                 navigation.classList.toggle("active");
             }
+
             function smoothScroll(target) {
                 const element = document.querySelector(target);
                 if (element) {
                     window.scrollTo({
-                        top: element.offsetTop - 200, // Скролл на 200 пикселей выше
+                        top: element.offsetTop - 200,
                         behavior: "smooth",
                     });
                 }
             }
+
             const menuLinks = document.querySelectorAll("#header-navigation a");
             menuLinks.forEach((link) => {
                 link.addEventListener("click", (event) => {
-                event.preventDefault(); 
-                const target = link.getAttribute("href"); 
-                smoothScroll(target);
+                    event.preventDefault();
+                    const target = link.getAttribute("href");
+                    smoothScroll(target);
                 });
             });
+
             window.addEventListener("scroll", function () {
                 const menu = document.getElementById("header-navigation");
                 if (window.scrollY > 100) {
@@ -465,15 +449,16 @@
                 }
                 if (window.innerWidth <= 1000) {
                     if (window.scrollY > 50) {
-                    menu.classList.add("scrolled");
-                    } 
-                } 
+                        menu.classList.add("scrolled");
+                    }
+                }
             });
+
             const clientsNum = document.getElementById('clientsNum');
             const smsNum = document.getElementById('smsNum');
             const day = document.getElementById('day');
             const minutes = document.getElementById('minutes');
-            let observer;
+            let numberObserver;
 
             function incrementNumber(element, targetNumber, intervalNum) {
                 let currentNumber = 0;
@@ -484,7 +469,7 @@
                     } else {
                         clearInterval(interval);
                     }
-                }, 1); // Увеличивает число каждые 1 миллисекунду
+                }, 1);
             }
 
             function handleIntersection(entries) {
@@ -494,29 +479,25 @@
                             incrementNumber(clientsNum, 456, 19);
                         } else if (entry.target.id === 'smsNum') {
                             incrementNumber(smsNum, 12345, 123);
-                        }
-                        else if (entry.target.id === 'day') {
+                        } else if (entry.target.id === 'day') {
                             incrementNumber(day, 123, 1);
-                        }
-                        else if (entry.target.id === 'minutes') {
+                        } else if (entry.target.id === 'minutes') {
                             incrementNumber(minutes, 28, 1);
                         }
-                        observer.unobserve(entry.target); // Останавливает наблюдение после первого срабатывания
+                        observer.unobserve(entry.target);
                     }
                 });
             }
 
             observer = new IntersectionObserver(handleIntersection, {
-                threshold: 0.001 // Срабатывает, когда 10% элемента в области видимости
+                threshold: 0.001
             });
 
             observer.observe(clientsNum);
             observer.observe(smsNum);
             observer.observe(day);
             observer.observe(minutes);
-            
-        });
-        document.addEventListener('DOMContentLoaded', () => {
+
             const section = document.getElementById('whyWeSection');
             const clouds = document.querySelectorAll('.cloud');
 
@@ -538,8 +519,8 @@
                 });
             };
 
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
-            observer.observe(section);
+            const sectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+            sectionObserver.observe(section);
         });
     </script>
 </body>
