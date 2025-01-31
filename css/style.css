@@ -74,7 +74,7 @@ a:focus {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    cursor: url(../img/LightningIcon.svg), pointer;
+    /* cursor: url(../img/LightningIcon.svg), pointer; */
 }
 main {
     display: flex;
