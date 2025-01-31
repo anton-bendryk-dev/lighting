@@ -462,7 +462,7 @@ footer {
 
 #clientsNumText,
 #smsNumText,
-#daysNumBox {
+#daysNumText {
     font-size: 16px;
     font-weight: 500;
     line-height: 19.2px;
@@ -470,7 +470,7 @@ footer {
 }
 
 #clientsNumText,
-#daysNumBox {
+#daysNumText {
     color: rgba(255, 255, 255, 0.65);
 }
 
@@ -1240,7 +1240,7 @@ p, h1, h2, h3, h4 {
     }
 
     .inline-header .logo {
-        width: auto;
+        width: 80%;
     }
 
     #header-navigation.scrolled {
@@ -1275,7 +1275,15 @@ p, h1, h2, h3, h4 {
     h1 {
         font-size: 36px;
     }
-
+    h2 {
+        font-size: 32px;
+    }
+    #clientsNum, #smsNum, #daysNum {
+        font-size: 54px;
+        font-weight: 800;
+        line-height: 64.8px;
+        margin-bottom: 10px;
+    }
     #header-navigation.scrolled {
         position: sticky;
     }
@@ -1318,5 +1326,16 @@ p, h1, h2, h3, h4 {
     #callerTextSection {
         background-position: center;
         background-size: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    #clientsNum, #smsNum, #daysNum {
+        font-size: 40px;
+    }
+    .apiBox {
+        flex-direction: column;
+    }
+    .apiItem {
+        margin-bottom: 10px;
     }
 }
