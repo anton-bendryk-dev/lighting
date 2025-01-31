@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LightningSMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="header-navigation">
+            <div class="inline-header">
+                <div class="logo">
+                    <a href="#"><img src="/img/logo_dark 1.svg" alt="SVG Image" width="312" height="46" /></a>
+                </div>
+                <nav class="navBar" onclick="toggleMenu()" >
+                    <ul>
+                        <li>
+                            <a href="#whyWeSection" class="header-menu__link">Почему мы?</a>
+                        </li>
+                        <li><a href="#priceSection" class="header-menu__link">Цены</a></li>
+                        <li><a href="#howItSection" class="header-menu__link">FAQ</a></li>
+                        <li>
+                            <a href="#contuctsSection" class="header-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn-container">
+                    <a href="#" class="btn"><span></span>За работу!</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="titleSection">
+                <div class="inlineTitleSectionContainer animate__animated animate__slideInDown">
+                    <h1 class="tc">Заголовок <span class="orange">лендинга</span></h1>
+                    <p class="greyText tc">Описание под заголовком</p>
+                    <div class="btn-container">
+                        <a href="#" class="btn"><span></span>За работу!</a>
+                    </div>
+                </div>
+            </section>
+            <section id="whyWeSection">
+                <p class="greyText tc">ТОП-3 ПРИЧИНЫ</p>
+                <h2 class="tc">Почему <span class="orange">ми?</span></h2>
+                <div class="texts-container">
+                    <div class="text1 text-box cloud cloud1">
+                        <p class="blackText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                            nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                            libero ultricies in. Cras quis nisi tristique, elementum metus
+                            egestas, accumsan ante.
+                        </p>
+                    </div>
+                    <div class="text2 text-box cloud cloud2">
+                        <p class="blackText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                            nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                            libero ultricies in. Cras quis nisi tristique, elementum metus
+                            egestas, accumsan ante.
+                        </p>
+                    </div>
+                    <div class="text4 text-box cloud cloud3">
+                        <p class="blackText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                            nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                            libero ultricies in. Cras quis nisi tristique, elementum metus
+                            egestas, accumsan ante.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="numbersSection">
+                <p class="greyText tc">ДЛЯ ЛЮБИТЕЛЕЙ ТОЧНОСТИ</p>
+                <h2 class="tc">Мы <span class="orange">в цифрах</span></h2>
+                <div class="inlineNumbersSection">
+                    <div class="clientsNumBox">
+                        <p id="clientsNum">0</p>
+                        <p id="clientsNumText">довольных клиентов</p>
+                    </div>
+                    <div class="smsNumBox">
+                        <p id="smsNum">0</p>
+                        <p id="smsNumText">отправленных SMS</p>
+                    </div>
+                    <div class="daysNumBox">
+                        <p id="daysNum">
+                            <span id="day">0</span>д<span> 1ч </span><span id="minutes">0</span>м
+                        </p>
+                        <p id="daysNumText">с момента запуска сервиса</p>
+                    </div>
+                </div>
+            </section>
+            <section id="howItSection">
+                <p class="greyText tc">ПОШАГОВО</p>
+                <h2 class="tc"><span class="orange">Как</span> это будет?</h2>
+                <div class="roadmapContainer">
+                    <div class="roadmapBox roadmapBox1">
+                        <span class="icon1"></span>
+                        <p>Связь с менеджером</p>
+                        <span class="icon2"></span>
+                    </div>
+                    <div class="roadmapBox roadmapBox2">
+                        <span class="icon2"></span>
+                        <p>Тестовая отправка на ваш номер</p>
+                        <span class="icon1"></span>
+                    </div>
+                    <div class="roadmapBox roadmapBox3">
+                        <span class="icon1"></span>
+                        <p>Вступительный взнос $100</p>
+                        <span class="icon2"></span>
+                    </div>
+                    <div class="roadmapBox roadmapBox4">
+                        <span class="icon2"></span>
+                        <p>Получение API токена и документации</p>
+                        <span class="icon1"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="priceSection">
+                <p class="greyText tc">БЛИЖЕ К ДЕЛУ</p>
+                <h2 class="tc">Цены</h2>
+                <div class="priceContainer">
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                    <div class="priceItem">
+                        <span class="countryIcon"></span>
+                        <p>country name</p>
+                        <span class="price">0.3 €*</span>
+                    </div>
+                </div>
+                <p class="greySmallText tc">
+                    * цены могут меняться, уточняйте у менеджера
+                </p>
+            </section>
+            <section id="callerTextSection">
+                <h1 class="tc">Зазывающий <span class="orange">текст</span></h1>
+                <p class="greyText tc">Зазывающий подтекст</p>
+                <div class="btn-container">
+                    <a href="#" class="btn"><span></span>За работу!</a>
+                </div>
+            </section>
+            <section id="apiSection">
+                <p class="greyText tc">КАК ЭТО ВЫГЛЯДИТ</p>
+                <h2 class="tc">API</h2>
+                <div class="apiContainer">
+                    <div class="inlineApiContainer">
+                        <span class="inlineApiBox">запрос</span>
+                        <div class="apiBox">
+                            <div class="apiItem">
+                                <input type="checkbox" class="custom-checkbox" id="apiIconPHP" name="apiIconPHP" />
+                                <label for="apiIconPHP"><img src="./img/Php.svg" />PHP</label>
+                            </div>
+                            <div class="apiItem">
+                                <input type="checkbox" class="custom-checkbox" id="apiIconNodeJS"
+                                    name="apiIconNodeJS" />
+                                <label for="apiIconNodeJS"><img src="./img/NodeJs.svg" />node.js</label>
+                            </div>
+                            <div class="apiItem">
+                                <input type="checkbox" class="custom-checkbox" id="apiIconPython"
+                                    name="apiIconPython" />
+                                <label for="apiIconPython"><img src="./img/Python.svg" />python</label>
+                            </div>
+                        </div>
+                        <div class="textareaContainer">
+                            <textarea name="apiRequest" id="apiRequest1" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="inlineApiContainer">
+                        <span class="inlineApiBox">результат</span>
+                        <div class="textareaContainer">
+                            <textarea name="apiRequest" id="apiRequest2" cols="30" rows="12"
+                                style="min-height: 265px"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="questionsSection">
+                <p class="greyText tc">СОМНЕВАЕТЕСЬ В ЧЁМ-ТО?</p>
+                <h2 class="tc">
+                    Часто задаваемые <span class="orange">вопросы</span>
+                </h2>
+                <div class="container">
+                    <div class="item">
+                        <div class="item-header">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit?</span>
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="divider"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                                libero ultricies in. Cras quis nisi tristique, elementum metus
+                                egestas, accumsan ante.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.</span>
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="divider"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                                libero ultricies in. Cras quis nisi tristique, elementum metus
+                                egestas, accumsan ante.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span>Lorem ipsum dolor sit amet, consectetur?</span>
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="divider"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                                libero ultricies in. Cras quis nisi tristique, elementum metus
+                                egestas, accumsan ante.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing?</span>
+                            <span class="icon">&#9660;</span>
+                        </div>
+                        <div class="item-content">
+                            <div class="divider"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
+                                libero ultricies in. Cras quis nisi tristique, elementum metus
+                                egestas, accumsan ante.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section id="contuctsSection">
+                <h2 class="tc">Подключайтесь <span class="orange">к нам!</span></h2>
+                <p class="greyText tc" style="margin-top: 20px; margin-bottom: 48px">
+                    Описание под заголовком
+                </p>
+                <div class="btn-container">
+                    <a href="#" class="btn"><span></span>За работу!</a>
+                </div>
+                <p class="greyText tc" style="margin-top: 20px">
+                    или отправьте email: <span class="orange">abcdefg@mail.com</span>
+                </p>
+                <div class="contuctsEmailSection">
+                    <div class="contuctsEmail channel_username">
+                        <p>@channel_username</p>
+                    </div>
+                    <div class="contuctsEmail bot_username">
+                        <p>@bot_username</p>
+                    </div>
+                    <div class="contuctsEmail support_username">
+                        <p>@support_username</p>
+                    </div>
+                </div>
+            </section>
+            <section id="vsSection">
+                <span class="greySmallText">© 2025, LightningSMS</span>
+                <span class="greySmallText">Made with 💙</span>
+            </section>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container'); // Родительский элемент, содержащий все .item
+
+            container.addEventListener('click', (event) => {
+                const header = event.target.closest('.item-header');
+                if (!header) return;
+
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Удаляем класс active у всех элементов
+                document.querySelectorAll('.item.active').forEach((activeItem) => {
+                    activeItem.classList.remove('active');
+                });
+
+                // Добавляем класс active к текущему элементу, если он не был активен
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const checkboxes = document.querySelectorAll(".custom-checkbox");
+            const apiRequest1 = document.getElementById("apiRequest1");
+            const apiRequest2 = document.getElementById("apiRequest2");
+
+            function updateTextAreas(checkbox, requestText, responseText) {
+                checkbox.addEventListener("change", () => {
+                    if (checkbox.checked) {
+                        checkboxes.forEach((cb) => {
+                            if (cb !== checkbox) {
+                                cb.checked = false;
+                                cb.nextElementSibling.style.backgroundColor = "";
+                                cb.nextElementSibling.style.color = "";
+                            }
+                        });
+                        apiRequest1.value = requestText;
+                        apiRequest2.value = responseText;
+                        checkbox.nextElementSibling.style.backgroundColor =
+                            "rgba(255, 186, 89, 0.1)";
+                        checkbox.nextElementSibling.style.color = "rgba(255, 186, 89, 1)";
+                    } else {
+                        apiRequest1.value = "";
+                        apiRequest2.value = "";
+                        checkbox.nextElementSibling.style.backgroundColor = "";
+                        checkbox.nextElementSibling.style.color = "";
+                    }
+                });
+            }
+
+            updateTextAreas(
+                document.getElementById("apiIconPHP"),
+                "PHP запрос",
+                "PHP ответ"
+            );
+            updateTextAreas(
+                document.getElementById("apiIconNodeJS"),
+                "Node.js запрос",
+                "Node.js ответ"
+            );
+            updateTextAreas(
+                document.getElementById("apiIconPython"),
+                "Python запрос",
+                "Python ответ"
+            );
+            
+            const titleSection = document.getElementById('titleSection');
+                setTimeout(() => {
+                    titleSection.style.backgroundImage = 'url(../img/LightningIcon.svg)';
+                    titleSection.style.backgroundPositionY = '70%';
+                }, 4000);
+                setInterval(() => {
+                    titleSection.style.backgroundPositionY = titleSection.style.backgroundPositionY === '70%' ? '80%' : '70%';
+                }, 1000);
+            function toggleMenu() {
+                const navigation = document.querySelector(".navBar");
+                navigation.classList.toggle("active");
+            }
+            function smoothScroll(target) {
+                const element = document.querySelector(target);
+                if (element) {
+                    window.scrollTo({
+                        top: element.offsetTop - 200, // Скролл на 200 пикселей выше
+                        behavior: "smooth",
+                    });
+                }
+            }
+            const menuLinks = document.querySelectorAll("#header-navigation a");
+            menuLinks.forEach((link) => {
+                link.addEventListener("click", (event) => {
+                event.preventDefault(); 
+                const target = link.getAttribute("href"); 
+                smoothScroll(target);
+                });
+            });
+            window.addEventListener("scroll", function () {
+                const menu = document.getElementById("header-navigation");
+                if (window.scrollY > 100) {
+                    menu.classList.add("scrolled");
+                } else {
+                    menu.classList.remove("scrolled");
+                }
+                if (window.innerWidth <= 1000) {
+                    if (window.scrollY > 50) {
+                    menu.classList.add("scrolled");
+                    } 
+                } 
+            });
+            const clientsNum = document.getElementById('clientsNum');
+            const smsNum = document.getElementById('smsNum');
+            const day = document.getElementById('day');
+            const minutes = document.getElementById('minutes');
+            let observer;
+
+            function incrementNumber(element, targetNumber, intervalNum) {
+                let currentNumber = 0;
+                const interval = setInterval(() => {
+                    if (currentNumber < targetNumber) {
+                        currentNumber += intervalNum;
+                        element.textContent = currentNumber;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 1); // Увеличивает число каждые 1 миллисекунду
+            }
+
+            function handleIntersection(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.id === 'clientsNum') {
+                            incrementNumber(clientsNum, 456, 19);
+                        } else if (entry.target.id === 'smsNum') {
+                            incrementNumber(smsNum, 12345, 123);
+                        }
+                        else if (entry.target.id === 'day') {
+                            incrementNumber(day, 123, 1);
+                        }
+                        else if (entry.target.id === 'minutes') {
+                            incrementNumber(minutes, 28, 1);
+                        }
+                        observer.unobserve(entry.target); // Останавливает наблюдение после первого срабатывания
+                    }
+                });
+            }
+
+            observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.001 // Срабатывает, когда 10% элемента в области видимости
+            });
+
+            observer.observe(clientsNum);
+            observer.observe(smsNum);
+            observer.observe(day);
+            observer.observe(minutes);
+            
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.getElementById('whyWeSection');
+            const clouds = document.querySelectorAll('.cloud');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        section.classList.add('animate-background');
+                        clouds.forEach(cloud => cloud.classList.add('animate-clouds'));
+                    } else {
+                        section.classList.remove('animate-background');
+                        clouds.forEach(cloud => cloud.classList.remove('animate-clouds'));
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
