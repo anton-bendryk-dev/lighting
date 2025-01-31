@@ -63,6 +63,10 @@ a:focus {
     outline: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -74,8 +78,8 @@ a:focus {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    /* cursor: url(../img/LightningIcon.svg), pointer; */
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -83,11 +87,18 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header,
+main,
+footer {
+    z-index: 5;
 }
 
 .inline-header {
@@ -105,12 +116,15 @@ header {
     align-items: center;
     justify-content: center;
 }
+
 .inline-header .btn-container {
     width: 25%;
 }
+
 .btn-container {
     width: fit-content;
 }
+
 .inline-header nav {
     display: flex;
     align-items: center;
@@ -279,10 +293,11 @@ header {
     justify-content: center;
     width: 100%;
     position: relative;
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
     background-position-x: center;
     background-size: 50px;
 }
+
 .inlineTitleSectionContainer {
     display: flex;
     align-items: center;
@@ -296,11 +311,13 @@ header {
     background-position-y: 5%;
     background-size: 100%;
 }
+
 .animate__animated.animate__slideInDown {
     --animate-duration: 2s;
     --animate-delay: 2s;
     animation-delay: var(--animate-delay);
 }
+
 .greyText {
     font-size: 20px;
     font-weight: 600;
@@ -312,17 +329,6 @@ header {
     margin-top: 30px;
     margin-bottom: 50px;
 }
-@keyframes moveBackground {
-    0% {
-        background-position-x: left;
-    }
-    50% {
-        background-position-x: right;
-    }
-    100% {
-        background-position-x: left;
-    }
-}
 
 #whyWeSection {
     display: flex;
@@ -330,29 +336,10 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(../img/clouds2.svg);
-    background-repeat: repeat-x;
-    background-size: 105%;
-    background-position-y: top;
+    background: url(../img/clouds1.svg) no-repeat;
+    background-position: top center;
+    background-size: 100%;
     position: relative;
-    animation: moveBackground 10s linear infinite;
-    -webkit-animation: moveBackground 10s linear infinite;
-}
-@keyframes moveClouds {
-    0% { transform: translateX(-20px); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(-20px); }
-}
-
-.cloud {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    min-height: 400px;
-    animation: moveClouds 10s infinite alternate ease-in-out;
-    -webkit-animation: moveClouds 10s infinite alternate ease-in-out;
 }
 
 .blackText {
@@ -374,22 +361,28 @@ header {
 }
 
 .text-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 400px;
     background: url(../img/cloud2.svg) no-repeat;
     background-position: top center;
     background-size: contain;
     padding: 20px;
 }
-.cloud1 {
+.cloudText1 {
     position: relative;
     bottom: 100px;
     right: 50px;
 }
-.cloud2 {
+.cloudText2 {
     position: relative;
     bottom: 50px;
     left: 50px;
 }
-.cloud3 {
+.cloudText3 {
     position: relative;
     left: 300px;
     bottom: 150px;
@@ -962,8 +955,6 @@ header {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    min-height: 150px;
-    max-width: 1000px;
 }
 
 .contuctsEmailSection p {
@@ -1005,11 +996,172 @@ header {
     background-image: url(../img/cloud_9.svg);
 }
 
+.divcloud1 {
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    top: 20%;
+    left: 10%;
+}
+
+@keyframes animCloud {
+    0% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+    }
+
+}
+
+.clouds {
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p, h1, h2, h3, h4 {
+    cursor: url(../img/LightningIcon.svg), auto;
+}
+.lights {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.clouds .cloud {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.cloud1 {
+    bottom: 20%;
+    left: 10%;
+    animation: animCloud 90s infinite linear;
+    -webkit-animation: animCloud 90s infinite linear;
+}
+
+.light1 {
+    width: 30px;
+    top: -142px;
+}
+
+.light2 {
+    width: 30px;
+    top: -142px;
+}
+
+.cloud2 {
+    top: 35%;
+    left: 30%;
+    animation: animCloud 40s infinite linear;
+    -webkit-animation: animCloud 40s infinite linear;
+}
+
+.light3 {
+    width: 30px;
+    top: -142px;
+}
+
+.cloud3 {
+    top: 20%;
+    left: 0;
+    animation: animCloud 50s infinite linear;
+    -webkit-animation: animCloud 50s infinite linear;
+}
+
+.cloud4 {
+    top: 5%;
+    left: 55%;
+    animation: animCloud 60s infinite linear;
+    -webkit-animation: animCloud 60s infinite linear;
+}
+.light4 {
+    width: 30px;
+    top: -142px;
+}
+@keyframes animCloudReverse {
+    0% {
+        transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+        -webkit-transform: translateX(-100vw);
+        -moz-transform: translateX(-100vw);
+        -ms-transform: translateX(-100vw);
+        -o-transform: translateX(-100vw);
+    }
+}
+
+.cloud5 {
+    top: 14%;
+    right: 20%;
+    animation: animCloudReverse 70s infinite linear;
+    -webkit-animation: animCloudReverse 70s infinite linear;
+}
+.light5 {
+    width: 30px;
+    top: -142px;
+}
+.cloud6 {
+    top: 29%;
+    right: 30%;
+    animation: animCloudReverse 35s infinite linear;
+    -webkit-animation: animCloudReverse 35s infinite linear;
+}
+.light6 {
+    width: 30px;
+    top: -142px;
+}
+.cloud7 {
+    top: 41%;
+    right: 0;
+    animation: animCloudReverse 50s infinite linear;
+    -webkit-animation: animCloudReverse 50s infinite linear;
+}
+.light7 {
+    width: 30px;
+    top: -142px;
+}
+.cloud8 {
+    top: 68%;
+    right: 59%;
+    animation: animCloudReverse 60s infinite linear;
+    -webkit-animation: animCloudReverse 60s infinite linear;
+}
+.light8 {
+    width: 30px;
+    top: -142px;
+}
 @media screen and (min-width: 1990px) {
     .wrapper {
         background-size: cover;
     }
 }
+
 @media screen and (max-width: 1330px) {
 
     .inline-header {
@@ -1038,6 +1190,8 @@ header {
     .text-box {
         width: 100%;
         margin-bottom: 20px;
+        position: static;
+        background-position: center;
     }
 
     .inlineNumbersSection {
@@ -1153,11 +1307,16 @@ header {
     .apiContainer {
         flex-direction: column;
     }
+
     .inlineApiContainer {
         width: 100%;
     }
+
     .contuctsEmail {
         position: static;
     }
+    #callerTextSection {
+        background-position: center;
+        background-size: 100%;
+    }
 }
-

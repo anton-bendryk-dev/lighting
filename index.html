@@ -20,12 +20,44 @@
 
 <body>
     <div class="wrapper">
+        <div class="clouds cloud1">
+            <img src="./cloud1/cloud1.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening1.png" alt="lightning" class="lights light1"/>
+        </div>
+        <div class="clouds cloud2">
+            <img src="./cloud1/cloud2.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening2.png" alt="lightning" class="lights light2"/>
+        </div>
+        <div class="clouds cloud3">
+            <img src="./cloud1/cloud3.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening3.png" alt="lightning" class="lights light3"/>
+        </div>
+        <div class="clouds cloud4">
+            <img src="./cloud1/cloud4.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening4.png" alt="lightning" class="lights light4"/>
+        </div>
+        <div class="clouds cloud5">
+            <img src="./cloud1/cloud5.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening5.png" alt="lightning" class="lights light5"/>
+        </div>
+        <div class="clouds cloud6">
+            <img src="./cloud1/cloud6.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening6.png" alt="lightning" class="lights light6"/>
+        </div>
+        <div class="clouds cloud7">
+            <img src="./cloud1/cloud3.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening3.png" alt="lightning" class="lights light7"/>
+        </div>
+        <div class="clouds cloud8">
+            <img src="./cloud1/cloud5.svg" alt="cloud" class="cloud"/>
+            <img src="./cloud1/ligtenings/lightening5.png" alt="lightning" class="lights light8"/>
+        </div>
         <header id="header-navigation">
             <div class="inline-header">
                 <div class="logo">
-                    <a href="#"><img src="/img/logo_dark 1.svg" alt="SVG Image" width="312" height="46" /></a>
+                    <a href="#"><img src="/img/logo_dark1.svg" alt="SVG Image" width="312" height="46" /></a>
                 </div>
-                <nav class="navBar" onclick="toggleMenu()" >
+                <nav class="navBar">
                     <ul>
                         <li>
                             <a href="#whyWeSection" class="header-menu__link">Почему мы?</a>
@@ -56,7 +88,7 @@
                 <p class="greyText tc">ТОП-3 ПРИЧИНЫ</p>
                 <h2 class="tc">Почему <span class="orange">ми?</span></h2>
                 <div class="texts-container">
-                    <div class="text1 text-box cloud cloud1">
+                    <div class="text1 text-box cloudText1">
                         <p class="blackText">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                             nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
@@ -64,7 +96,7 @@
                             egestas, accumsan ante.
                         </p>
                     </div>
-                    <div class="text2 text-box cloud cloud2">
+                    <div class="text2 text-box cloudText2">
                         <p class="blackText">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                             nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
@@ -72,7 +104,7 @@
                             egestas, accumsan ante.
                         </p>
                     </div>
-                    <div class="text4 text-box cloud cloud3">
+                    <div class="text4 text-box cloudText3">
                         <p class="blackText">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                             nec rhoncus mi. Maecenas lacinia fringilla enim, ac facilisis
@@ -359,21 +391,24 @@
                 <span class="greySmallText">Made with 💙</span>
             </section>
         </footer>
+            
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.container');
-            container.addEventListener('click', (event) => {
-                const header = event.target.closest('.item-header');
-                if (!header) return;
-                const item = header.parentElement;
-                const isActive = item.classList.contains('active');
-                document.querySelectorAll('.item.active').forEach((activeItem) => {
-                    activeItem.classList.remove('active');
+            let items = document.querySelectorAll(".item");
+
+            items.forEach((item) => {
+                let header = item.querySelector(".item-header");
+
+                header.addEventListener("click", () => {
+                    let isActive = item.classList.contains("active");
+
+                    items.forEach((i) => i.classList.remove("active"));
+
+                    if (!isActive) {
+                        item.classList.add("active");
+                    }
                 });
-                if (!isActive) {
-                    item.classList.add('active');
-                }
             });
 
             const checkboxes = document.querySelectorAll(".custom-checkbox");
@@ -420,7 +455,7 @@
                 const navigation = document.querySelector(".navBar");
                 navigation.classList.toggle("active");
             }
-
+            document.querySelector(".navBar").addEventListener("click", toggleMenu);
             function smoothScroll(target) {
                 const element = document.querySelector(target);
                 if (element) {
